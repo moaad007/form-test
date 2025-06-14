@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educare - We don't just teach, we inspire</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Educare.</div>
+      <button class="mobile-menu-btn">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#pricing">packs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="login-btn">register</button></li>
+      </ul>
+    </nav>
+
+    <main class="hero">
+      <div class="hero-content">
+        <h1>WE don't just<br />teach we inspire</h1>
+        <p>
+          During these hard times, the world is facing situation your kids don't
+          miss out while you are away from school!
+        </p>
+        <div class="cta-buttons">
+          <button class="primary-btn">Find a Tutor</button>
+          <button class="secondary-btn">Watch Video</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="./assets/Recess-bro.svg"
+          alt="Student studying illustration"
+        />
+      </div>
+    </main>
+
+    <section class="camps-section">
+      <header class="section-header">
+        <h1>Discover. Learn. Play.</h1>
+        <p>Choose the perfect summer program for your child.</p>
+      </header>
+
+      <div class="camp-cards">
+        <!-- Nature Explorer Card -->
+        <div class="camp-card">
+          <div class="card-header">
+            <div class="camp-type">🌿 Nature Explorer</div>
+            <p class="age-group">Ages 8-14 years</p>
+            <p class="duration">1 week program</p>
+            <button class="camp-btn">Register Now →</button>
+          </div>
+
+          <div class="activities">
+            <h3>Activities Included</h3>
+            <ul>
+              <li>Nature Photography</li>
+              <li>Wildlife Observation</li>
+              <li>Environmental Projects</li>
+              <li>Outdoor Playing</li>
+              <li>Football and Basketball</li>
+              <li>Team Building Games</li>
+              <li>Survival Skills Basics</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <p class="info-text">
+              For pricing and full details, please fill out the registration
+              form below.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tech Innovator Card -->
+        <div class="camp-card">
+          <div class="card-header">
+            <div class="camp-type">🤖 Tech Innovator</div>
+            <p class="age-group">Ages 8-14 years</p>
+            <p class="duration">1 week program</p>
+            <button class="camp-btn">Register Now →</button>
+          </div>
+
+          <div class="activities">
+            <h3>Activities Included</h3>
+            <ul>
+              <li>Coding Workshops</li>
+              <li>AI & Robotics</li>
+              <li>3D Printing Projects</li>
+              <li>Digital Art Creation</li>
+              <li>Science Experiments</li>
+              <li>Tech Challenges</li>
+              <li>Innovation Projects</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <p class="info-text">
+              For pricing and full details, please fill out the registration
+              form below.
+            </p>
+          </div>
+        </div>
+
+        <!-- Creative Arts Card -->
+        <div class="camp-card">
+          <div class="card-header">
+            <div class="camp-type">🎨 Creative Arts</div>
+            <p class="age-group">Ages 8-14 years</p>
+            <p class="duration">1 week program</p>
+            <button class="camp-btn">Register Now →</button>
+          </div>
+
+          <div class="activities">
+            <h3>Activities Included</h3>
+            <ul>
+              <li>Drawing & Painting</li>
+              <li>Craft Workshops</li>
+              <li>Digital Design</li>
+              <li>Photography Basics</li>
+              <li>Creative Writing</li>
+              <li>Art Exhibition</li>
+              <li>Team Projects</li>
+            </ul>
+          </div>
+          <div class="card-footer">
+            <p class="info-text">
+              For pricing and full details, please fill out the registration
+              form below.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="register-section">
+      <div class="register-wrapper">
+        <div class="form-side">
+          <header class="section-header">
+            <h2>Camp Registration</h2>
+            <p>Register your child for an unforgettable summer experience</p>
+          </header>
+
+          <form class="registration-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="parentName">Parent's Name*</label>
+                <input
+                  type="text"
+                  id="parentName"
+                  placeholder="Enter full name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number*</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="+1 (123) 456-7890"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="childCount">Number of Children*</label>
+                <input
+                  type="number"
+                  id="childCount"
+                  min="1"
+                  placeholder="Enter number"
+                  required
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="address">Full Address*</label>
+                <input
+                  type="text"
+                  id="address"
+                  placeholder="Street address, City, State, ZIP code"
+                  required
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="childrenDetails">Children's Names and Ages*</label>
+                <input
+                  type="text"
+                  id="childrenDetails"
+                  placeholder="e.g., Sarah – 9 years old, John – 11 years old"
+                  required
+                />
+              </div>
+
+              <div class="form-group full-width">
+                <label for="program">Program Selection*</label>
+                <select id="program" required>
+                  <option value="" disabled selected>
+                    Choose a summer program
+                  </option>
+                  <option value="nature">Nature Explorer Camp</option>
+                  <option value="tech">Tech Innovator Camp</option>
+                  <option value="arts">Creative Arts Camp</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="notes">Additional Notes</label>
+                <textarea
+                  id="notes"
+                  rows="3"
+                  placeholder="Please mention any allergies, medical conditions, or special requirements"
+                ></textarea>
+              </div>
+
+              <div class="form-buttons full-width">
+                <button type="submit" class="btn-register">Register</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@summercamp.com</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 123 Camp Street, Adventure
+              City, AC 12345
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#programs">Home</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#registration">Registration</a></li>
+          
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Summer Camp. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
