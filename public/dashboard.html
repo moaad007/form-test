@@ -1,48 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Summer Camp Dashboard</title>
-  <link rel="stylesheet" href="dash.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Camp Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dash.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Summer Camp Dashboard</h1>
+      <p>Overview of camp registrations and activities</p>
+    </header>
 
-  <h1>Summer Camp Registrations Dashboard</h1>
+    <section class="stats">
+      <div class="stat-box total-box">
+        <h2>Total Registrations</h2>
+        <p>156</p>
+      </div>
+      <div class="stat-box total-box">
+        <h2>Total Kids</h2>
+        <p>187</p>
+      </div>
+      <div class="stat-box camp-box">
+        <h2>Camp Nature</h2>
+        <p>42</p>
+      </div>
+      <div class="stat-box camp-box">
+        <h2>Camp Tech</h2>
+        <p>38</p>
+      </div>
+      <div class="stat-box camp-box">
+        <h2>Camp Arts</h2>
+        <p>35</p>
+      </div>
+      <div class="stat-box camp-box">
+        <h2>Camp Sports</h2>
+        <p>40</p>
+      </div>
+      <div class="stat-box camp-box">
+        <h2>Camp Science</h2>
+        <p>32</p>
+      </div>
+    </section>
 
-  <div class="stats">
-    <div class="stat-box">
-      <h3>Total Families</h3>
-      <p id="totalFamilies">0</p>
-    </div>
-    <div class="stat-box">
-      <h3>Total Kids</h3>
-      <p id="totalKids">0</p>
-    </div>
-    <div class="stat-box">
-      <h3>Average Kids / Family</h3>
-      <p id="avgKids">0</p>
-    </div>
-    <div class="stat-box">
-      <h3>Age Range</h3>
-      <p id="ageRange">—</p>
-    </div>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Parent Name</th>
-        <th>Contact</th>
-        <th>Address</th>
-        <th>Children</th>
-        <th>Registration Date</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody id="registrationsTable"></tbody>
-  </table>
-
-  <script src="/scripts.js"></script>
-</body>
+    <section>
+      <div class="filter-container">
+        <h2>Recent Registrations</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-program="all">All</button>
+          <button class="filter-btn" data-program="Camp Nature">Nature</button>
+          <button class="filter-btn" data-program="Camp Tech">Tech</button>
+          <button class="filter-btn" data-program="Camp Arts">Arts</button>
+          <button class="filter-btn" data-program="Camp Sports">Sports</button>
+          <button class="filter-btn" data-program="Camp Science">
+            Science
+          </button>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Parent Name</th>
+            <th>Children</th>
+            <th>Program</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Registration Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Marie Dubois</td>
+            <td>Sophie (9), Lucas (11)</td>
+            <td>Camp Nature</td>
+            <td>marie.dubois@email.com</td>
+            <td>+33 6 12 34 56 78</td>
+            <td>15 Jun 2025</td>
+          </tr>
+          <tr>
+            <td>Thomas Bernard</td>
+            <td>Emma (10)</td>
+            <td>Camp Tech</td>
+            <td>t.bernard@email.com</td>
+            <td>+33 6 23 45 67 89</td>
+            <td>14 Jun 2025</td>
+          </tr>
+          <tr>
+            <td>Claire Martin</td>
+            <td>Louis (12), Jules (8)</td>
+            <td>Camp Arts</td>
+            <td>claire.m@email.com</td>
+            <td>+33 6 34 56 78 90</td>
+            <td>14 Jun 2025</td>
+          </tr>
+          <tr>
+            <td>Antoine Petit</td>
+            <td>Léa (9)</td>
+            <td>Camp Nature</td>
+            <td>antoine.p@email.com</td>
+            <td>+33 6 45 67 89 01</td>
+            <td>13 Jun 2025</td>
+          </tr>
+          <tr>
+            <td>Julie Laurent</td>
+            <td>Noah (11), Alice (13)</td>
+            <td>Camp Tech</td>
+            <td>julie.laurent@email.com</td>
+            <td>+33 6 56 78 90 12</td>
+            <td>13 Jun 2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <script src="dashboard.js"></script>
+  </body>
 </html>
