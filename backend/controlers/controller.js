@@ -1,24 +1,48 @@
-const db = require('../config/db');
+const db = require('../config/db'); // Import database connection
 
-const submitForm = (req, res) => {
-  const { name, email, message } = req.body;
+const submitForm = async (req, res) => {
+    try {
+        console.log('Incoming request body:', req.body); // Log the request body for debugging
 
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Name and email are required' });
-  }
+        const {
+            parent_name,
+            phone_number,
+            email,
+            number_of_children,
+            address,
+            children_info,
+            program_choice,
+            additional_notes
+        } = req.body; // Extract form data from the request body
 
-  const query = 'INSERT INTO form_data (name, email, message) VALUES (?, ?, ?)';
-  db.query(query, [name, email, message], (err) => {
-    if (err) return res.status(500).json({ error: 'DB insert error' });
-    res.status(201).json({ message: 'Form submitted successfully' });
-  });
+        // Perform validation (example: check required fields)
+        if (!parent_name || !phone_number || !email || !number_of_children || !address || !children_info || !program_choice) {
+            console.error('Validation failed: Missing required fields');
+            return res.status(400).json({ error: 'All required fields must be provided.' });
+        }
+
+        // Insert data into the database
+        const query = `INSERT INTO form_app (parent_name, phone_number, email, number_of_children, address, children_info, program_choice, additional_notes, submitted_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())`;
+        const values = [parent_name, phone_number, email, number_of_children, address, children_info, program_choice, additional_notes];
+
+        db.query(query, values, (err, result) => {
+            if (err) {
+                console.error('Error inserting data:', err);
+                return res.status(500).json({ error: 'An error occurred while saving the form data.' });
+            }
+
+            console.log('Database insert result:', result); // Log the result for debugging
+
+            // Respond with success
+            res.status(200).json({ 
+                message: 'Form submitted successfully!', 
+                data: req.body 
+            });
+        });
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        res.status(500).json({ error: 'An error occurred while submitting the form.' });
+    }
 };
 
-const getForms = (req, res) => {
-  db.query('SELECT * FROM form_data ORDER BY created_at DESC', (err, results) => {
-    if (err) return res.status(500).json({ error: 'DB fetch error' });
-    res.json(results);
-  });
-};
-
-module.exports = { submitForm, getForms };
+module.exports = { submitForm };
