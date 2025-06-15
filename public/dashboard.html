@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Summer Camp Dashboard</title>
+  <link rel="stylesheet" href="dash.css" />
+</head>
+<body>
+
+  <h1>Summer Camp Registrations Dashboard</h1>
+
+  <div class="stats">
+    <div class="stat-box">
+      <h3>Total Families</h3>
+      <p id="totalFamilies">0</p>
+    </div>
+    <div class="stat-box">
+      <h3>Total Kids</h3>
+      <p id="totalKids">0</p>
+    </div>
+    <div class="stat-box">
+      <h3>Average Kids / Family</h3>
+      <p id="avgKids">0</p>
+    </div>
+    <div class="stat-box">
+      <h3>Age Range</h3>
+      <p id="ageRange">—</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Parent Name</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Children</th>
+        <th>Registration Date</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody id="registrationsTable"></tbody>
+  </table>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>
