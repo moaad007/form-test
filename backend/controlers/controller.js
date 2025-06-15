@@ -45,4 +45,30 @@ const submitForm = async (req, res) => {
     }
 };
 
-module.exports = { submitForm };
+const getForms = (req, res) => {
+    try {
+        const { parent_name } = req.query; // Extract query parameter
+        let query = 'SELECT * FROM form_app';
+        const values = [];
+
+        if (parent_name) {
+            query += ' WHERE parent_name = ?';
+            values.push(parent_name);
+        }
+
+        db.query(query, values, (err, results) => {
+            if (err) {
+                console.error('Error fetching data:', err);
+                return res.status(500).json({ error: 'An error occurred while fetching the form data.' });
+            }
+
+            // Respond with the fetched data
+            res.status(200).json({ message: 'Forms retrieved successfully!', data: results });
+        });
+    } catch (error) {
+        console.error('Error retrieving forms:', error);
+        res.status(500).json({ error: 'An error occurred while retrieving the forms.' });
+    }
+};
+
+module.exports = { submitForm, getForms };
