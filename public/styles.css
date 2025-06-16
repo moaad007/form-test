@@ -300,108 +300,6 @@ nav {
   }
 }
 
-.pricing-plans {
-  display: flex;
-  gap: 24px;
-  padding: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.plan-card {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  width: 340px;
-  border: 1px solid #e5e7eb;
-  position: relative;
-}
-
-.plan-card.recommended {
-  border: 2px solid #22c55e;
-}
-
-.plan-tag {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #22c55e;
-  color: white;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.plan-header {
-  margin-bottom: 2rem;
-}
-
-.plan-type {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.plan-header h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.duration {
-  font-size: 1rem;
-  color: #6b7280;
-  margin-left: 4px;
-}
-
-.subtitle {
-  color: #6b7280;
-  font-size: 0.875rem;
-  margin-bottom: 1.5rem;
-}
-
-.plan-btn {
-  width: 100%;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  background: #18181b;
-  color: white;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.plan-btn:hover {
-  background: #27272a;
-}
-
-.features h3 {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-}
-
-.features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.features li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  color: #374151;
-  font-size: 0.875rem;
-}
-
-.features li::before {
-  content: "✓";
-  color: #22c55e;
-}
 
 .camp-cards {
   display: flex;
@@ -418,32 +316,20 @@ nav {
   width: 340px;
   border: 1px solid #c8d5ef;
   position: relative;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .camp-card:hover {
   transform: translateY(-5px);
-}
-
-.camp-tag {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #7749f8;
-  color: white;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 500;
+  background: #f1f4f7;
 }
 
 .card-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.3rem;
 }
 
 .camp-type {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -453,7 +339,7 @@ nav {
   color: #666;
   font-size: 0.9rem;
   font-weight: 600;
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 
 .camp-btn {
@@ -476,17 +362,19 @@ nav {
 
 .activities h3 {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #4a5568;
+  
 }
 
 .activities ul {
   list-style: none;
   padding: 0;
+  line-height: 1;
 }
 
 .activities li {
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -524,7 +412,7 @@ nav {
 }
 
 .card-footer {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid #e5e7eb;
 }
