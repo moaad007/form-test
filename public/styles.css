@@ -217,12 +217,35 @@ nav {
        
 
             .boxes-container {
+              overflow: hidden;
                 position: absolute;
-                /* width: 100%; */
+                top: 100px;
+                left: 0px;
+                right: 0px;
+                /* bottom: 0px; */
+                padding: 0;
+                /* width: 100vw; */
                 height: calc(100% - 60px ) ;
                 z-index: -1;
                 /* Reduce height on mobile */
             }
+            .box1{
+                left: 1%;
+                top: 15%;
+            }
+            .box2 {
+                left: 60%;
+                top: 50%;
+            }
+            .box3 {
+                left: 5%;
+                top: 60%;
+            }
+            .box4 {
+                left: 70%;
+                top: 10%;
+            }
+            
         }
 .hero-image {
   flex: 1;
@@ -294,48 +317,40 @@ nav {
     flex-direction: column;
     text-align: center;
    
- 
+
     
     gap: 2rem;
-    min-height: calc(100vh - 60px);
+    min-height: calc(90vh - 60px);
+    /* making the hero section smaller on mobile */
   }
 
   .hero-content {
- /* background-color: #4a5568; */
- /* align-items: center; */
-
- 
+backdrop-filter: blur(3px);
+    /* color: #fff; */
+  
+  
+    width: 100vw;
+    padding: 0px 10vw;
 
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
-    margin-top: 20vh;
+    font-size: 2rem;
+    margin-top: 15vh;
   }
 
   .hero-content p {
     max-width: 100%;
+    font-weight: 600;
+    color: #1a1a1a;
+    /* font-size: 20px; */
     margin: 0 auto 1.5rem;
   }
 
   .cta-buttons {
     justify-content: center;
-    margin-top: 15vh;
+    margin-top: 13vh;
   }
-
-  .hero-image {
-    order: 0; /* Move image above content */
-    margin-top: 0;
-    opacity: 1;
-  }
-
-  .hero-image img {
-    max-height: 40vh;
-    width: auto;
-  }
-
-
-  /* Remove section-header styles from here */
 }
 
 /* Tablet Devices */
@@ -357,7 +372,7 @@ nav {
 /* Small Mobile Devices */
 @media screen and (max-width: 480px) {
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .cta-buttons {
@@ -368,6 +383,7 @@ nav {
   .primary-btn,
   .secondary-btn {
     width: 100%;
+    padding: 20px 1.5rem;
   }
 }
 
@@ -458,7 +474,7 @@ nav {
 }
 
 .camps-section {
-  padding: 4rem 2rem;
+  padding: 4rem 0.5rem;
   background-color: #f8f9fa;
 }
 
@@ -496,8 +512,8 @@ nav {
 }
 
 .register-section {
-  padding: 6rem 2rem;
-  /* background-color: #e2e8f0; */
+  padding: 6rem 1rem;
+ 
 }
 
 .register-wrapper {
