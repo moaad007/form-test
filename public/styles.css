@@ -156,6 +156,74 @@ nav {
 }
 
 /* Hero Image */
+.boxes-container {
+  position: relative;
+  height: 75vh;
+            /* background-color: #1a1a1a; */
+   border:  red 2px solid;
+            flex: 1;
+       
+        }
+.box {
+            position: absolute;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+
+        }
+        .box1 {
+            width: 180px;
+            height: 220px;
+            background-color: #FF6B6B;
+            top: 15%;
+            left: 20%;
+            transform: rotate(-5deg);
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-color: #4ECDC4;
+            top: 35%;
+            left: 50%;
+            transform: rotate(8deg);
+        }
+
+        .box3 {
+            width: 180px;
+            height: 160px;
+            background-color: #FFD93D;
+            top: 55%;
+            left: 10%;
+            transform: rotate(-8deg);
+        }
+
+        .box4 {
+            width: 140px;
+            height: 190px;
+            background-color: #95A5A6;
+            top: 20px;
+            left: 65%;
+            transform: rotate(5deg);
+        }
+
+  @media (max-width: 768px) {
+       
+
+       
+
+            .boxes-container {
+                position: absolute;
+                /* width: 100%; */
+                height: calc(100% - 60px ) ;
+                z-index: -1;
+                /* Reduce height on mobile */
+            }
+        }
 .hero-image {
   flex: 1;
   display: flex;
@@ -216,26 +284,33 @@ nav {
   }
 
   .login-btn {
-    display: none;
+    display: block;
   }
 
   .hero {
-    margin-top: 60px; /* Account for fixed nav */
+    /* background: #000; */
+    margin-top: 70px; /* Account for fixed nav */
     padding: 2rem 1rem;
     flex-direction: column;
     text-align: center;
+   
+ 
+    
     gap: 2rem;
     min-height: calc(100vh - 60px);
   }
 
   .hero-content {
-    order: 1; /* Move content below image */
-    transform: none;
+ /* background-color: #4a5568; */
+ /* align-items: center; */
+
+ 
+
   }
 
   .hero-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-top: 20vh;
   }
 
   .hero-content p {
@@ -245,6 +320,7 @@ nav {
 
   .cta-buttons {
     justify-content: center;
+    margin-top: 15vh;
   }
 
   .hero-image {
@@ -258,11 +334,6 @@ nav {
     width: auto;
   }
 
-  .course-card {
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-  }
 
   /* Remove section-header styles from here */
 }
