@@ -233,13 +233,14 @@
             <p>Recevez les tarifs et les détails par formulaire.</p>
           </header>
 
-          <form class="registration-form">
+          <form class="registration-form" id="form">
             <div class="form-grid">
               <div class="form-group">
                 <label for="parentName">Nom du parent*</label>
                 <input
                   type="text"
                   id="parentName"
+                  name="parent_name"
                   placeholder="Entrez le nom complet"
                   required
                 />
@@ -250,6 +251,7 @@
                 <input
                   type="tel"
                   id="phone"
+                  name="phone_number"
                   placeholder="+212 6 00 00 00 00"
                   required
                 />
@@ -260,6 +262,7 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="votre@email.com"
                   required
                 />
@@ -270,6 +273,7 @@
                 <input
                   type="number"
                   id="childCount"
+                  name="number_of_children"
                   min="1"
                   placeholder="Entrez un nombre"
                   required
@@ -281,6 +285,7 @@
                 <input
                   type="text"
                   id="address"
+                  name="address"
                   placeholder="Rue, Ville, Code postal"
                   required
                 />
@@ -316,7 +321,7 @@
 
               <div class="form-group full-width">
                 <label for="program">Choix du programme*</label>
-                <select id="program" required>
+                <select id="program" name="program_choice" required>
                   <option value="" disabled selected>
                     Sélectionnez un programme
                   </option>
@@ -331,6 +336,7 @@
                 <textarea
                   id="notes"
                   rows="3"
+                  name="additional_notes"
                   placeholder="Indiquez allergies, besoins spécifiques, etc."
                 ></textarea>
               </div>
