@@ -112,3 +112,81 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+
+
+
+// End of the script
+//scripts carosell
+ document.addEventListener('DOMContentLoaded', function() {
+  const campCards = document.querySelector('.camp-cards');
+  const originalCards = Array.from(document.querySelectorAll('.camp-card'));
+  
+  // Create scrollable container (scrollbar hidden)
+  const carouselWrapper = document.createElement('div');
+  Object.assign(carouselWrapper.style, {
+    display: 'flex',
+    gap: '24px',
+    width: '100%',
+    overflowX: 'auto',
+    scrollSnapType: 'x mandatory',
+    scrollBehavior: 'smooth',
+    // Hide scrollbar across all browsers
+    msOverflowStyle: 'none',
+    scrollbarWidth: 'none',
+    '::-webkit-scrollbar': { display: 'none' }
+  });
+  
+  // Hide scrollbar for Webkit browsers
+  const style = document.createElement('style');
+  style.textContent = `
+    .camp-cards > div::-webkit-scrollbar {
+      display: none;
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // Add cards to container
+  originalCards.forEach(card => {
+    const cardWrapper = document.createElement('div');
+    cardWrapper.style.scrollSnapAlign = 'start';
+    cardWrapper.style.flexShrink = '0';
+    cardWrapper.appendChild(card);
+    carouselWrapper.appendChild(cardWrapper);
+  });
+  
+  // Replace original content
+  campCards.innerHTML = '';
+  campCards.appendChild(carouselWrapper);
+  
+  // Enable touch/swipe scrolling
+  let startX;
+  carouselWrapper.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: true });
+  
+  carouselWrapper.addEventListener('touchmove', (e) => {
+    // Let native scroll handle it
+  }, { passive: true });
+  
+  // Enable mouse wheel horizontal scrolling
+  carouselWrapper.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      carouselWrapper.scrollLeft += e.deltaY * 2;
+    }
+  }, { passive: false });
+  
+  // Optional: Scale down on mobile
+  function scaleForMobile() {
+    const scale = window.innerWidth <= 768 ? 0.85 : 1;
+    originalCards.forEach(card => {
+      card.style.transform = `scale(${scale})`;
+      card.style.margin = scale < 1 ? '0 -8px' : '';
+    });
+  }
+  
+  scaleForMobile();
+  window.addEventListener('resize', scaleForMobile);
+});
