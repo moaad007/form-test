@@ -44,16 +44,15 @@ const submitForm = async (req, res) => {
         res.status(500).json({ error: 'An error occurred while submitting the form.' });
     }
 };
-
 const getForms = (req, res) => {
     try {
-        const { parent_name } = req.query; // Extract query parameter
+        const { program_choice } = req.query; // Extract query parameter
         let query = 'SELECT * FROM form_app';
         const values = [];
 
-        if (parent_name) {
-            query += ' WHERE parent_name = ?';
-            values.push(parent_name);
+        if (program_choice) {
+             query += ' WHERE program_choice = ?'; // Removes LOWER()
+            values.push(program_choice); // No toLowerCase()
         }
 
         db.query(query, values, (err, results) => {
