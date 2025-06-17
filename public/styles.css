@@ -142,8 +142,8 @@ nav {
 }
 
 .secondary-btn {
-  background-color: transparent;
-  color: var(--text-dark);
+  background-color: #f3f0ff;
+  color: var(--primary-color);
   padding: 0.8rem 2rem;
   border: 1px solid #e5e5e5;
   border-radius: 5px;
@@ -161,53 +161,66 @@ nav {
 .boxes-container {
   position: relative;
   height: 75vh;
-            /* background-color: #1a1a1a; */
-   border:  red 2px solid;
+  
+  
             flex: 1;
        
         }
 .box {
             position: absolute;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(25, 21, 79, 0.422);
             transition: transform 0.3s ease;
+            
+            
+            
         }
-
+.box img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            filter: brightness(0.8);
+            transition: filter 0.3s ease;
+        }
         .box:hover {
             transform: scale(1.05);
 
         }
+        .box:hover img {
+            filter: brightness(1);
+        }
         .box1 {
-            width: 180px;
-            height: 220px;
-            background-color: #FF6B6B;
-            top: 15%;
+            width: 200px;
+            height: 200px;
+            /* background-color: #FF6B6B; */
+            top: 13%;
             left: 20%;
             transform: rotate(-5deg);
         }
 
         .box2 {
-            width: 150px;
-            height: 150px;
-            background-color: #4ECDC4;
-            top: 35%;
-            left: 50%;
-            transform: rotate(8deg);
+            width: 170px;
+            height: 170px;
+            /* background-color: #4ECDC4; */
+            top: 50%;
+            left: 60%;
+            transform: rotate(-8deg);
         }
 
         .box3 {
             width: 180px;
             height: 160px;
-            background-color: #FFD93D;
+            /* background-color: #FFD93D; */
             top: 55%;
-            left: 10%;
-            transform: rotate(-8deg);
+            left: 16%;
+            transform: rotate(8deg);
         }
 
         .box4 {
-            width: 140px;
+            width: 180px;
             height: 190px;
-            background-color: #95A5A6;
+            /* background-color: #95A5A6; */
             top: 20px;
             left: 65%;
             transform: rotate(5deg);
@@ -224,7 +237,7 @@ nav {
                 top: 100px;
                 left: 0px;
                 right: 0px;
-                /* bottom: 0px; */
+                bottom: 0px;
                 padding: 0;
                 /* width: 100vw; */
                 height: calc(100% - 60px ) ;
@@ -364,10 +377,13 @@ backdrop-filter: blur(3px);
   .hero {
     padding: 2rem 3rem;
     gap: 2rem;
+    overflow: hidden;
   }
+ .hero-content {
 
+  }
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
