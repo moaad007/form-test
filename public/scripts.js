@@ -12,10 +12,16 @@
       : '<i class="fas fa-bars"></i>';
   });
 
-  // Close menu when clicking outside
+ 
 
 
 
+
+
+
+
+
+// bozi this part doesn't concern you
 document.addEventListener("DOMContentLoaded", function () {
   const childName = document.getElementById("childName");
   const childAge = document.getElementById("childAge");
@@ -42,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear inputs
     childName.value = "";
     childAge.value = "";
-  });
+    console.log(children);
+
 
   function addChildToList(child) {
     const childEntry = document.createElement("div");
@@ -63,8 +70,45 @@ document.addEventListener("DOMContentLoaded", function () {
         children.splice(index, 1);
       }
       childEntry.remove();
+      console.log(children);
     });
 
     childrenContainer.appendChild(childEntry);
   }
+});
+//RETRIVE DATA FROM THE FORM
+//do not touch this part
+  // Handle form submission
+  const form = document.getElementById("form");
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    // Add children data to the form data
+    data.children_info = JSON.stringify(children);
+    
+    try {
+      const response = await fetch("http://localhost:3001/api/form/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      alert(result.message);
+      console.log(result.data);
+      form.reset(); // Reset the form after successful submission
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Une erreur s'est produite lors de l'envoi du formulaire.");
+    }
+  });
 });
