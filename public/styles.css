@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #7749f8;
+  --primary-color: #FF6F3C;
   --text-dark: #2d2d2d;
   --text-light: #666666;
   --background: #ffffff;
@@ -39,6 +39,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
+  color: var(--primary-color);
 }
 
 .nav-links {
@@ -143,7 +144,7 @@ nav {
 }
 
 .primary-btn:hover {
-  background-color: #5f35d5;
+  background-color: #f16836;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(119, 73, 248, 0.2);
 }
@@ -159,8 +160,9 @@ nav {
 }
 
 .secondary-btn:hover {
-  background-color: #f5f5f5;
-  border-color: #d1d1d1;
+  
+  border-color: var(--primary-color
+  );
   transform: translateY(-2px);
 }
 
@@ -209,14 +211,14 @@ nav {
         }
 
         .box2 {
-            width: 17vw;
-            height: 17vw;
+            width: 15vw;
+            height: 15vw;
             min-width: 150px;
             min-height: 150px;
             /* background-color: #4ECDC4; */
-            top: 45%;
-            left: 55%;
-            transform: rotate(-8deg);
+            top: 5%;
+            left: 54%;
+            transform: rotate(8deg);
         }
 
         .box3 {
@@ -232,13 +234,13 @@ nav {
 
         .box4 {
             width: 15vw;
-            height: 17vw;
+            height: 15vw;
             min-width: 150px;
             min-height: 150px;
             /* background-color: #95A5A6; */
-            top: 2%;
+            top: 50%;
             left: 55%;
-            transform: rotate(12deg);
+            transform: rotate(-12deg);
         }
 
   @media (max-width: 768px) {
@@ -432,7 +434,7 @@ backdrop-filter: blur(3px);
   border-radius: 15px;
   padding: 2rem;
   width: 340px;
-  border: 1px solid #c8d5ef;
+  border: 1px solid #ff703ca3;
   position: relative;
   transition: transform 0.3s ease, background 0.3s ease;
 }
@@ -465,7 +467,7 @@ backdrop-filter: blur(3px);
   text-align: center;
   width: 100%;
   padding: 0.75rem;
-  background: #7749f8;
+  background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 8px;
@@ -476,7 +478,7 @@ backdrop-filter: blur(3px);
 }
 
 .camp-btn:hover {
-  background: #5f35d5;
+  background: #e06336;
   transform: translateY(-2px);
 }
 
@@ -503,7 +505,7 @@ backdrop-filter: blur(3px);
 
 .activities li::before {
   content: "✦";
-  color: #7749f8;
+  color: var(--primary-color);
 }
 
 .camps-section {
@@ -520,14 +522,14 @@ backdrop-filter: blur(3px);
 .section-header h1 {
   font-size: 3rem;
   color: #1a1a1a;
-  line-height: 1;
+  /* line-height: 1; */
   font-weight: 700;
-  padding-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .section-header p {
   font-size: 1.25rem;
-  color: #4a5568;
+  color: #FF6F3C;
   margin-bottom: 15px;
 }
 
@@ -539,7 +541,7 @@ backdrop-filter: blur(3px);
 
 .info-text {
   font-size: 0.875rem;
-  color: #155594c4;
+  color: #ff703cac;
   text-align: center;
   font-style: italic;
 }
@@ -570,11 +572,11 @@ backdrop-filter: blur(3px);
 
 .section-header h2 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .section-header p {
-  color: #64748b;
+  color: #ff703cb0;
 }
 
 .form-grid {
@@ -598,7 +600,7 @@ select,
 textarea {
   width: 100%;
   padding: 0.85rem;
-  border: 2px solid #6035d575;
+  border: 2px solid #fe734192;
   border-radius: 8px;
   font-size: 1rem;
 }
@@ -607,7 +609,7 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: #7749f8;
+  border-color: #FF6F3C;
   box-shadow: 0 0 0 3px rgba(119, 73, 248, 0.1);
 }
 
@@ -619,7 +621,7 @@ textarea {
 .btn-register {
   width: 100%;
   padding: 1rem;
-  background: #7749f8;
+  background: #FF6F3C;
   color: white;
   border: none;
   border-radius: 8px;
@@ -630,7 +632,7 @@ textarea {
 }
 
 .btn-register:hover {
-  background: #5f35d5;
+  background: #e76637;
   transform: translateY(-2px);
 }
  
@@ -711,7 +713,7 @@ textarea {
   bottom: -0.5rem;
   width: 50px;
   height: 2px;
-  background: #7749f8;
+  background: var(--primary-color);
 }
 
 .footer-section ul {
@@ -734,7 +736,7 @@ textarea {
 }
 
 .footer-section a:hover {
-  color: #7749f8;
+  color: #FF6F3C;
 }
 
 .social-links {
@@ -754,7 +756,7 @@ textarea {
 }
 
 .social-links a:hover {
-  background: #7749f8;
+  background: #FF6F3C;
   color: #fff;
 }
 
@@ -835,7 +837,7 @@ textarea {
 
 .btn-add-child {
   padding: 0.75rem 1.5rem;
-  background: #7749f8;
+  background: #FF6F3C;
   color: white;
   border: none;
   border-radius: 6px;
@@ -850,7 +852,7 @@ textarea {
 }
 
 .btn-add-child:hover {
-  background: #5f35d5;
+  background: #de6134;
   transform: translateY(-1px);
 }
 
