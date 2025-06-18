@@ -12,6 +12,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+  
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -21,13 +26,13 @@
       <ul class="nav-links">
         <li><a href="#">Accueil</a></li>
         <li><a href="#programs">Programmes</a></li>
-        <li><a href="#registration">Contactez-nous</a></li>
-        <li><button class="login-btn" ><a href="#contact">Inscription</a></button></li>
+        <li><a href="#contact">Contactez-nous</a></li>
+        <li><a href="#registration">Inscription</a></li>
       </ul>
     </nav>
 
     <main class="hero">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200" >
         <h1>Offrez à votre enfant <br />un été inoubliable</h1>
         <p>
           Participez à nos programmes ludiques et éducatifs pour les enfants de
@@ -35,11 +40,11 @@
           souvenirs pour la vie.
         </p>
         <div class="cta-buttons">
-          <button class="primary-btn">Inscrivez maintenant</button>
-          <button class="secondary-btn">Nos packs</button>
+          <a class="primary-btn" href="#registration">Inscrivez maintenant</a>
+          <a class="secondary-btn" href="#programs">Nos packs</a>
         </div>
       </div>
-      <div class="boxes-container">
+      <div class="boxes-container" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
             <div class="box box1">
               <img src="assets/img1.jpg" alt="">
             </div>
@@ -54,28 +59,23 @@
             </div>
         </div>
 
-      <!-- <div class="hero-image">
-        <img
-          src="../assets/Recess-bro.svg"
-          alt="Student studying illustration"
-        />
-      </div> -->
+ 
     </main>
 
-    <section class="camps-section" id="programs">
+    <section class="camps-section" id="programs" data-aos="fade-up" data-aos-duration="1500" >
       <header class="section-header">
         <h1>Nos packs été 2025</h1>
         <p>Activités ludiques, éducatives et encadrées.</p>
       </header>
 
-      <div class="camp-cards">
+      <div class="camp-cards" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <!-- Pack Creativity -->
             <div class="camp-card">
           <div class="card-header">
             <div class="camp-type">🎨 Pack Creativity</div>
             <p class="age-group">Âge : 3–4 ans</p>
             <p class="duration">Durée : 2 semaines (30 Juin – 12 Juillet)</p>
-            <button class="camp-btn">Inscrire maintenant →</button>
+            <a href="#registration" class="camp-btn">Inscrire maintenant →</a>
           </div>
           <div class="activities">
             <h3>Activités incluses</h3>
@@ -108,7 +108,7 @@
                 <div class="camp-type">🏊‍♂️ Pack My Skills</div>
                 <p class="age-group">Âge : 5–14 ans</p>
                 <p class="duration">Durée : 2 semaines (30 Juin – 13 Juillet)</p>
-                <button class="camp-btn">Inscrire maintenant →</button>
+                <a class="camp-btn" href="#registration">Inscrire maintenant →</a>
               </div>
               <div class="activities">
                 <h3>Activités incluses</h3>
@@ -140,7 +140,7 @@
                 <div class="camp-type">⛳ Pack VIP</div>
                 <p class="age-group">Âge : 5–14 ans</p>
                 <p class="duration">Durée : 2 semaines (30 Juin – 12 Juillet)</p>
-                <button class="camp-btn">Inscrire maintenant →</button>
+                <a href="#registration" class="camp-btn">Inscrire maintenant →</a>
               </div>
               <div class="activities">
                 <h3>Activités incluses</h3>
@@ -174,7 +174,7 @@
                 <div class="camp-type">🌊 Pack Discovery</div>
                 <p class="age-group">Âge : 5–14 ans</p>
                 <p class="duration">Durée : 2 semaines (30 Juin – 12 Juillet)</p>
-                <button class="camp-btn">Inscrire maintenant →</button>
+                <a class="camp-btn" href="#registration">Inscrire maintenant →</a>
               </div>
               <div class="activities">
                 <h3>Activités incluses</h3>
@@ -207,7 +207,7 @@
                 <div class="camp-type">🧠 Pack Genius</div>
                 <p class="age-group">Âge : 5–14 ans</p>
                 <p class="duration">Durée : 2 semaines (30 Juin – 12 Juillet)</p>
-                <button class="camp-btn">Inscrire maintenant →</button>
+                <a class="camp-btn" href="#registration">Inscrire maintenant →</a>
               </div>
               <div class="activities">
                 <h3>Activités incluses</h3>
@@ -240,7 +240,7 @@
         </div>
     </section>
 
-    <section class="register-section" id="registration">
+    <section class="register-section" id="registration" data-aos="fade-up" data-aos-duration="1500" >
       <div class="register-wrapper">
         <div class="form-side">
           <header class="section-header">
@@ -248,7 +248,7 @@
             <p>Recevez les tarifs et les détails par formulaire.</p>
           </header>
 
-          <form class="registration-form" id="form">
+          <form class="registration-form" id="form" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
             <div class="form-grid">
               <div class="form-group">
                 <label for="parentName">Nom du parent*</label>
@@ -361,12 +361,15 @@
               </div>
             </div>
           </form>
+          <div id="successMessage" class="hidden">
+  ✅ Your message has been sent successfully!
+</div>
         </div>
       </div>
     </section>
 
-    <footer class="footer" id="contact">
-      <div class="footer-container">
+    <footer class="footer" id="contact" >
+      <div class="footer-container" data-aos="fade-up" data-aos-duration="1500" >
         <div class="footer-section">
           <h3>Contactez-nous</h3>
           <ul>
@@ -404,5 +407,9 @@
     </footer>
 
     <script src="scripts.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
