@@ -357,9 +357,10 @@ nav {
   }
 
   .hero-content {
-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: #ffffff5e ;
     /* color: #fff; */
-  
+ min-height: 90vh;
   
     width: 100vw;
     padding: 0px 10vw;
