@@ -14,6 +14,11 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 /* Navigation Styles */
 nav {
@@ -389,9 +394,6 @@ backdrop-filter: blur(3px);
     gap: 2rem;
     overflow: hidden;
   }
- .hero-content {
-
-  }
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -458,7 +460,9 @@ backdrop-filter: blur(3px);
   margin: 0.3rem 0;
 }
 
-.camp-btn {
+.camp-btn  {
+  display: block;
+  text-align: center;
   width: 100%;
   padding: 0.75rem;
   background: #7749f8;
@@ -628,6 +632,20 @@ textarea {
 .btn-register:hover {
   background: #5f35d5;
   transform: translateY(-2px);
+}
+ 
+#successMessage {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 768px) {
