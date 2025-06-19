@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       carouselWrapper.scrollLeft += e.deltaY * 2;
     }
-  }, { passive: false });
+  }, { passive: true });
   
   // Optional: Scale down on mobile
   function scaleForMobile() {
