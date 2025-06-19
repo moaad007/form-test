@@ -427,7 +427,7 @@ nav {
   gap: 24px;
   padding: 2rem;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .camp-card {
@@ -510,7 +510,7 @@ nav {
 }
 
 .camps-section {
-  padding: 4rem 0.5rem;
+  padding: 4rem 0rem;
   background-color: #f8f9fa;
 }
 

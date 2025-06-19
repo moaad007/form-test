@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     display: 'flex',
     gap: '24px',
     width: '100%',
+    
     overflowX: 'auto',
     scrollSnapType: 'x mandatory',
     scrollBehavior: 'smooth',
@@ -180,10 +181,10 @@ document.addEventListener("DOMContentLoaded", function () {
   
   // Optional: Scale down on mobile
   function scaleForMobile() {
-    const scale = window.innerWidth <= 768 ? 0.85 : 1;
+    const scale = window.innerWidth <= 768 ? 0.85  : 1;
     originalCards.forEach(card => {
       card.style.transform = `scale(${scale})`;
-      card.style.margin = scale < 1 ? '0 -8px' : '';
+      card.style.margin = scale < 1 ? '0 -20px' : '';
     });
   }
   
