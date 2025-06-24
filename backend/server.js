@@ -7,7 +7,11 @@ const app = express();
 const PORT = 3001;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://form-test-git-master-moaad007s-projects.vercel.app", // ✅ your frontend URL
+  methods: ["GET", "POST", "OPTIONS"],
+  credentials: true
+}));
 app.use(express.json()); // 🚨 REQUIRED for JSON
 // app.use(bodyParser.json()); // Optional
 
