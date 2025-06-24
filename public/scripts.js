@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     data.children_info = JSON.stringify(children);
     
     try {
-      const response = await fetch("http://localhost:3001/api/form/", {
+      const response = await fetch("https://form-test-bice.vercel.app/api/form/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
