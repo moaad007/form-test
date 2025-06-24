@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //loading stats 
 async function loadStats() {
   try {
-    const response = await fetch("http://localhost:3001/api/form");
+    const response = await fetch("https://form-test-bice.vercel.app//api/form");
     const result = await response.json();
     const registrations = result.data || [];
 
